@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Boldy Go! Trivia</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    
+
+</head>
+
+<body>
+
+    <h1>Boldy Go! Trivia</h1>
+   
+
+    <div id="time">Time Remaining:
+        <p id="countdown"></p>
+        
+    </div>
+
+    <p id="score1">Score: <span id="score"></span></p>
+
+
+
+    
+    <form  id="quiz" name="quiz">
+    <h2 id="q1">1. Enterprise D is a "_____" class starship.</h2>
+    
+    <input type="radio" id="question1" name="question1" value="Klingon"> Klingon
+    <input type="radio" id="question1" name="question1" value="Interstellar"> Interstellar
+    <input type="radio" id="question1" name="question1" value="Galaxy"> Galaxy
+    <input type="radio" id="question1" name="question1" value="None Of These"> None of These
+    
+    <br>
+    
+
+    
+    
+    <h2 id="q2">2. Captain Janeway is in command of which starship?</h2>
+    
+    <input type="radio" id="input" name="question2" value="USS Enterprise"> USS Enterprise
+    <input type="radio" id="input" name="question2" value="USS Voyager"> USS Voyager
+    <input type="radio" id="input" name="question2" value="Farpoint Station"> Farpoint Station
+    <input type="radio" id="input" name="question2" value="The Hopper"> The Hopper
+    
+    <br>
+    
+
+    
+    
+    <h2 id="q3">3. The "Banjo Man" is better known as whom in the Voyager series?</h2>
+    
+    <input type="radio" id="input" name="question3" value="Captain Picard"> Captain Picard
+    <input type="radio" id="input" name="question3" value="The Caretaker"> The Caretaker
+    <input type="radio" id="input" name="question3" value="Q"> Q
+    <input type="radio" id="input" name="question3" value="Commander Chakotay"> Commander Chakotay
+    
+    <br>
+   
+
+    
+    
+    <h2 id="q4">4. Which character was murdered by his own crewmates, never to return to any Star Trek series.</h2>
+    
+    <input type="radio" id="input" name="question4" value="Tasha Yar"> Tasha Yar
+    <input type="radio" id="input" name="question4" value="Captain Kirk"> Captain Kirk
+    <input type="radio" id="input" name="question4" value="Tuvix"> Tuvix
+    <input type="radio" id="input" name="question4" value="Data"> Dr. Crusher
+    
+    <br>
+    
+
+    
+    
+    <h2 id="q5">5. What's the name of Star Trek: The Next Generation final episode?.</h2>
+    
+    <input type="radio" id="input" name="question5" value="Encounter At Farpoint"> Encounter At Farpoint
+    <input type="radio" id="input" name="question5" value="All Good Things..."> All Good Things...
+    <input type="radio" id="input" name="question5" value="Application"> The Inner Light 
+    <input type="radio" id="input" name="question5" value="None of These"> Family
+    </form>
+    <br>
+    <button onclick="submitAnswer()">Click answer and submit!</button>
+
+  
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <script>
+    
+    var score = 0;
+    
+
+    function submitAnswer() {
+        var questionOne = document.quiz.question1.value;   
+        var questionTwo = document.quiz.question2.value;
+        var questionThree = document.quiz.question3.value;
+        var questionFour = document.quiz.question4.value;
+        var questionFive = document.quiz.question5.value;     
+        
+        //$("#score").html(score);
+        document.getElementById("score").innerHTML = score;
+        
+        if (questionOne == "Galaxy") {
+            score++;
+            console.log("ttt")
+            $("#q1").append("<p class='great-job'>" + "Make it so!" + "<p>");
+        }
+        else {
+            $("#q1").append("<p class='great-job'>" + "Reverse course, Ensign!" + "<p>");
+        }
+        if (questionTwo == "USS Voyager") {
+            score++;
+            console.log("fff")
+            $("#q2").append("<p class='great-job'>" + "Make it so!" + "<p>");
+        }
+        else {
+            $("#q2").append("<p class='great-job'>" + "Reverse course, Ensign!" + "<p>");
+        }
+        if (questionThree == "The Caretaker") {
+            score++;
+            console.log("hhh")
+            $("#q3").append("<p class='great-job'>" + "Make it so!" + "<p>");
+        }
+        else {
+            $("#q3").append("<p class='great-job'>" + "Reverse course, Ensign!" + "<p>");
+        }
+        if (questionFour == "Tuvix") {
+            score++;
+            console.log("jjj")
+            $("#q4").append("<p class='great-job'>" + "Make it so!" + "<p>");
+        }
+        else {
+            $("#q4").append("<p class='great-job'>" + "Reverse course, Ensign!" + "<p>");
+        }
+        if (questionFive == "All Good Things...") {
+            score++;
+            console.log("lll")
+            $("#q5").append("<p class='great-job'>" + "Make it so!" + "<p>");
+        }
+        else {
+            $("#q1").append("<p class='great-job'>" + "Reverse course, Ensign!" + "<p>");
+        }
+            }
+
+        $(document).ready(function() {
+
+         var intervalId;
+         var number = 30;
+
+         function run() {
+             clearInterval(intervalId);
+             intervalId = setInterval( decrement, 1000)
+         }
+
+         function decrement() {
+             number--;
+             $("#countdown").html("<p>" + number + "</p>")
+                 if(number === 0) {
+                     stop();
+                     alert("Time's up!");
+                 }
+            }
+
+            function stop() {
+                clearInterval(intervalId);
+            }
+
+            run();
+
+            
+
+
+
+    });
+    
+    
+    
+    </script>
+
+</body>
+
+</html>

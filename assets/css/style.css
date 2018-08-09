@@ -1,0 +1,59 @@
+    body {
+    background-image: url("../images/Background.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
+    /* margin: 0px; */
+     }
+
+  h1 {
+    text-align: center;
+    font-size: 66px;
+    font-family: 'Ranga', cursive;
+    color: rgb(60, 60, 138);
+    text-shadow: 2px 2px 8px rgb(83, 9, 44);
+  }
+
+  #q1, #q2, #q3, #q4, #q5 {
+    font-size: 46px;
+    font-family: 'Ranga', cursive;
+    color: rgb(60, 60, 138);
+    text-shadow: 2px 2px 8px rgb(83, 9, 44);
+  }
+
+  #time {
+   text-align: center;
+    color:white;
+    font-size: 36px;
+    
+  }
+
+  #countdown {
+    font-family: 'Ranga', cursive;
+    color:red;
+    text-shadow: 2px 2px 8px rgb(83, 9, 44);
+    font-size: 66px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  #score {
+    color:white;
+    font-size: 46px;
+  }
+
+  #score1 {
+    color:white;
+    font-size: 46px;
+    margin-top: 0px;
+  }
+
+  #quiz {
+      color: yellow;
+  }
+
+  .great-job {
+    color:white;
+    font-size: 20px;
+    margin-top: 0px;
+
+  }
