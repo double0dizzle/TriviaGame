@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Boldy Go! Trivia</title>
+    <title>Boldly Go! Trivia</title>
 
     <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
 
@@ -15,7 +15,7 @@
 
 <body>
 
-    <h1>Boldy Go! Trivia</h1>
+    <h1><img id="button1" src="assets/images/button.jpg" alt="left pic">Boldly Go! Trivia<img id="button2" src="assets/images/button.jpg" alt="right pic"></h1>
    
 
     <div id="time">Time Remaining:
@@ -23,7 +23,7 @@
         
     </div>
 
-    <p id="score1">Score: <span id="score"></span></p>
+    <p id="score1">Score: <span id="score"></span><img id="front-pic" src="assets/images/star-trek.jpg" alt="crew pic"></p>
 
 
 
@@ -99,6 +99,7 @@
     
     var score = 0;
     
+    
 
     function submitAnswer() {
         var questionOne = document.quiz.question1.value;   
@@ -148,9 +149,12 @@
             $("#q5").append("<p class='great-job'>" + "Make it so!" + "<p>");
         }
         else {
-            $("#q1").append("<p class='great-job'>" + "Reverse course, Ensign!" + "<p>");
+            $("#q5").append("<p class='great-job'>" + "Reverse course, Ensign!" + "<p>");
         }
+        document.getElementById("score").innerHTML = score;
             }
+        
+       
 
         $(document).ready(function() {
 
@@ -175,6 +179,7 @@
                 clearInterval(intervalId);
             }
 
+
             run();
 
             
@@ -182,7 +187,7 @@
 
 
     });
-    
+
     
     
     </script>
@@ -190,3 +195,4 @@
 </body>
 
 </html>
+

@@ -1,8 +1,9 @@
     body {
     background-image: url("../images/Background.jpg");
-    /* background-repeat: no-repeat; */
-    background-size: 100%;
-    /* margin: 0px; */
+    background-repeat: space;
+    /* background-size: 100%; */
+    background-color: black;
+    
      }
 
   h1 {
@@ -49,6 +50,7 @@
 
   #quiz {
       color: yellow;
+      text-shadow: 2px 2px 8px red;
   }
 
   .great-job {
@@ -57,3 +59,20 @@
     margin-top: 0px;
 
   }
+
+  #front-pic {
+      width: 500px;
+      height: 300px;
+      float: right;
+  }
+
+  #button1 {
+      width: 200px;
+      height: 200px;
+      float: left;
+  }
+  #button2 {
+    width: 200px;
+    height: 200px;
+    float: right;
+}
